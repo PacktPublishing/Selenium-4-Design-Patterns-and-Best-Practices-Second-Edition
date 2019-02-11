@@ -17,8 +17,4 @@
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Purchase Tests Version 3\" />
-  </ItemGroup>
-
 </Project>

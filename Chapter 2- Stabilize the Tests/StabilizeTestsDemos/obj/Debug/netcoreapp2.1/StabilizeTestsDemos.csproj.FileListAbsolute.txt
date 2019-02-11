@@ -20,7 +20,6 @@ D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edi
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.runtimeconfig.dev.json
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.dll
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.pdb
-D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.csprojAssemblyReference.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.csproj.CoreCompileInputs.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.AssemblyInfoInputs.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.AssemblyInfo.cs
