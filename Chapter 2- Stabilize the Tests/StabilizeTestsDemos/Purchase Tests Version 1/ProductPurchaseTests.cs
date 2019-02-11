@@ -31,10 +31,6 @@ namespace StabilizeTestsDemos.FirstVersion
         {
             _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
 
-            var sortDropDown = new SelectElement(_driver.FindElement(By.CssSelector("[name$='orderby']")));
-
-            sortDropDown.SelectByText("Sort by price: low to high");
-
             var addToCartFalcon9 = _driver.FindElement(By.CssSelector("[data-product_id*='28']"));
             addToCartFalcon9.Click();
             Thread.Sleep(500);
@@ -116,7 +112,6 @@ namespace StabilizeTestsDemos.FirstVersion
             var myAccountLink = _driver.FindElement(By.LinkText("My account"));
             myAccountLink.Click();
 
-
             var userName = _driver.FindElement(By.Id("username"));
             userName.SendKeys(_purchaseEmail);
             var password = _driver.FindElement(By.Id("password"));
@@ -143,10 +138,6 @@ namespace StabilizeTestsDemos.FirstVersion
         public void CompletePurchaseWithExistingClient()
         {
             _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
-
-            var sortDropDown = new SelectElement(_driver.FindElement(By.CssSelector("[name$='orderby']")));
-
-            sortDropDown.SelectByText("Sort by price: low to high");
 
             var addToCartFalcon9 = _driver.FindElement(By.CssSelector("[data-product_id*='28']"));
             addToCartFalcon9.Click();
@@ -189,7 +180,6 @@ namespace StabilizeTestsDemos.FirstVersion
             password.SendKeys(GetUserPasswordFromDb(_purchaseEmail));
             var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
             loginButton.Click();
-
          
             var placeOrderButton = _driver.FindElement(By.Id("place_order"));
             placeOrderButton.Click();
