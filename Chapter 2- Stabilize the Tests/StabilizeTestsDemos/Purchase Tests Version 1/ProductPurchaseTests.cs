@@ -27,7 +27,7 @@ namespace StabilizeTestsDemos.FirstVersion
         }
 
         [TestMethod]
-        public void CompletePurchaseWithNewClient()
+        public void CompletePurchaseSuccessfully_WhenNewClient()
         {
             _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
 
@@ -40,10 +40,8 @@ namespace StabilizeTestsDemos.FirstVersion
             var couponCodeTextField = _driver.FindElement(By.Id("coupon_code"));
             couponCodeTextField.Clear();
             couponCodeTextField.SendKeys("happybirthday");
-
             var applyCouponButton = _driver.FindElement(By.CssSelector("[value*='Apply coupon']"));
             applyCouponButton.Click();
-
             Thread.Sleep(2000);
             var messageAlert = _driver.FindElement(By.CssSelector("[class*='woocommerce-message']"));
             Assert.AreEqual("Coupon code applied successfully.", messageAlert.Text);
@@ -57,7 +55,6 @@ namespace StabilizeTestsDemos.FirstVersion
             var updateCart = _driver.FindElement(By.CssSelector("[value*='Update cart']"));
             updateCart.Click();
             Thread.Sleep(2000);
-
             var totalSpan = _driver.FindElement(By.XPath("//*[@class='order-total']//span"));
             Assert.AreEqual("114.00€", totalSpan.Text);
 
@@ -74,10 +71,8 @@ namespace StabilizeTestsDemos.FirstVersion
             billingCountryWrapper.Click();
             var billingCountryFilter = _driver.FindElement(By.ClassName("select2-search__field"));
             billingCountryFilter.SendKeys("Germany");
-
             var germanyOption = _driver.FindElement(By.XPath("//*[contains(text(),'Germany')]"));
             germanyOption.Click();
-
             var billingAddress1 = _driver.FindElement(By.Id("billing_address_1"));
             billingAddress1.SendKeys("1 Willi Brandt Avenue Tiergarten");
             var billingAddress2 = _driver.FindElement(By.Id("billing_address_2"));
@@ -105,37 +100,7 @@ namespace StabilizeTestsDemos.FirstVersion
         }
 
         [TestMethod]
-        public void MyAccountPurchase()
-        {
-            _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
-
-            var myAccountLink = _driver.FindElement(By.LinkText("My account"));
-            myAccountLink.Click();
-
-            var userName = _driver.FindElement(By.Id("username"));
-            userName.SendKeys(_purchaseEmail);
-            var password = _driver.FindElement(By.Id("password"));
-            password.SendKeys(GetUserPasswordFromDb(GetUserPasswordFromDb(_purchaseEmail)));
-            var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
-            loginButton.Click();
-
-            Thread.Sleep(2000);
-            var orders = _driver.FindElement(By.LinkText("Orders"));
-            orders.Click();
-
-            Thread.Sleep(2000);
-            var viewButtons = _driver.FindElements(By.LinkText("View"));
-            viewButtons[0].Click();
-
-            Thread.Sleep(2000);
-
-            var orderName = _driver.FindElement(By.XPath("//h1"));
-            string expectedMessage = string.Format("Order #{0}", _purchaseOrderNumber);
-            Assert.AreEqual(expectedMessage, orderName.Text);
-        }
-
-        [TestMethod]
-        public void CompletePurchaseWithExistingClient()
+        public void CompletePurchaseSuccessfully_WhenExistingClient()
         {
             _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
 
@@ -148,10 +113,8 @@ namespace StabilizeTestsDemos.FirstVersion
             var couponCodeTextField = _driver.FindElement(By.Id("coupon_code"));
             couponCodeTextField.Clear();
             couponCodeTextField.SendKeys("happybirthday");
-
             var applyCouponButton = _driver.FindElement(By.CssSelector("[value*='Apply coupon']"));
             applyCouponButton.Click();
-
             Thread.Sleep(2000);
             var messageAlert = _driver.FindElement(By.CssSelector("[class*='woocommerce-message']"));
             Assert.AreEqual("Coupon code applied successfully.", messageAlert.Text);
@@ -160,12 +123,10 @@ namespace StabilizeTestsDemos.FirstVersion
             quantityBox.Clear();
             Thread.Sleep(50);
             quantityBox.SendKeys("2");
-
             Thread.Sleep(2000);
             var updateCart = _driver.FindElement(By.CssSelector("[value*='Update cart']"));
             updateCart.Click();
             Thread.Sleep(2000);
-
             var totalSpan = _driver.FindElement(By.XPath("//*[@class='order-total']//span"));
             Assert.AreEqual("114.00€", totalSpan.Text);
 
@@ -190,6 +151,34 @@ namespace StabilizeTestsDemos.FirstVersion
 
             var orderNumber = _driver.FindElement(By.XPath("//*[@id='post-7']/div/div/div/ul/li[1]/strong"));
             _purchaseOrderNumber = orderNumber.Text;
+        }
+
+        [TestMethod]
+        public void CorrectOrderDataDisplayed_WhenNavigateToMyAccountOrderSection()
+        {
+            _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
+
+            var myAccountLink = _driver.FindElement(By.LinkText("My account"));
+            myAccountLink.Click();
+            var userName = _driver.FindElement(By.Id("username"));
+            userName.SendKeys(_purchaseEmail);
+            var password = _driver.FindElement(By.Id("password"));
+            password.SendKeys(GetUserPasswordFromDb(GetUserPasswordFromDb(_purchaseEmail)));
+            var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
+            loginButton.Click();
+
+            Thread.Sleep(2000);
+            var orders = _driver.FindElement(By.LinkText("Orders"));
+            orders.Click();
+
+            Thread.Sleep(2000);
+            var viewButtons = _driver.FindElements(By.LinkText("View"));
+            viewButtons[0].Click();
+            Thread.Sleep(2000);
+
+            var orderName = _driver.FindElement(By.XPath("//h1"));
+            string expectedMessage = string.Format("Order #{0}", _purchaseOrderNumber);
+            Assert.AreEqual(expectedMessage, orderName.Text);
         }
 
         private string GetUserPasswordFromDb(string userName)

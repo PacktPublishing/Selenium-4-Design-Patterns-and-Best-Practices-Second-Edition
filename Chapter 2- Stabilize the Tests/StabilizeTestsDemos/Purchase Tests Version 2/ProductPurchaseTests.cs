@@ -28,7 +28,7 @@ namespace StabilizeTestsDemos.SecondVersion
         }
 
         [TestMethod]
-        public void CompletePurchaseWithNewClient()
+        public void CompletePurchaseSuccessfully_WhenNewClient()
         {
             AddRocketToShoppingCart();
 
@@ -79,28 +79,7 @@ namespace StabilizeTestsDemos.SecondVersion
         }
 
         [TestMethod]
-        public void MyAccountPurchase()
-        {
-            _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
-
-            var myAccountLink = WaitAndFindElement(By.LinkText("My account"));
-            myAccountLink.Click();
-
-            Login(_purchaseEmail);
-
-            var orders = WaitAndFindElement(By.LinkText("Orders"));
-            orders.Click();
-
-            var viewButtons = WaitAndFindElements(By.LinkText("View"));
-            viewButtons[0].Click();
-
-            var orderName = WaitAndFindElement(By.XPath("//h1"));
-            string expectedMessage = string.Format("Order #{0}", _purchaseOrderNumber);
-            Assert.AreEqual(expectedMessage, orderName.Text);
-        }
-
-        [TestMethod]
-        public void CompletePurchaseWithExistingClient()
+        public void CompletePurchaseSuccessfully_WhenExistingClient()
         {
             AddRocketToShoppingCart();
             ApplyCoupon();
@@ -122,6 +101,27 @@ namespace StabilizeTestsDemos.SecondVersion
 
             var orderNumber = WaitAndFindElement(By.XPath("//*[@id='post-7']/div/div/div/ul/li[1]/strong"));
             _purchaseOrderNumber = orderNumber.Text;
+        }
+
+        [TestMethod]
+        public void CorrectOrderDataDisplayed_WhenNavigateToMyAccountOrderSection()
+        {
+            _driver.Navigate().GoToUrl("http://demos.bellatrix.solutions/");
+
+            var myAccountLink = WaitAndFindElement(By.LinkText("My account"));
+            myAccountLink.Click();
+
+            Login(_purchaseEmail);
+
+            var orders = WaitAndFindElement(By.LinkText("Orders"));
+            orders.Click();
+
+            var viewButtons = WaitAndFindElements(By.LinkText("View"));
+            viewButtons[0].Click();
+
+            var orderName = WaitAndFindElement(By.XPath("//h1"));
+            string expectedMessage = string.Format("Order #{0}", _purchaseOrderNumber);
+            Assert.AreEqual(expectedMessage, orderName.Text);
         }
 
         private void Login(string userName)
