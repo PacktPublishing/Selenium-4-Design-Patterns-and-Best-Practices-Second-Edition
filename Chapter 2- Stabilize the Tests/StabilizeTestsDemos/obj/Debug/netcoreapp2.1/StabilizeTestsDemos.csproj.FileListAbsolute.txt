@@ -1,0 +1,14 @@
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.deps.json
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.runtimeconfig.json
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.runtimeconfig.dev.json
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.dll
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.csproj.CoreCompileInputs.cache
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.AssemblyInfoInputs.cache
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.AssemblyInfo.cs
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\bin\Debug\netcoreapp2.1\StabilizeTestsDemos.pdb
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.dll
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.pdb
+C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 2- Stabilize the Tests\StabilizeTestsDemos\obj\Debug\netcoreapp2.1\StabilizeTestsDemos.csprojAssemblyReference.cache
