@@ -8,22 +8,8 @@ namespace StabilizeTestsDemos.FifthVersion
     [ExecutionBrowser(Browser.Chrome, BrowserBehavior.ReuseIfStarted)]
     public class ProductPurchaseTests : BaseTest
     {
-        ////private static Driver Driver;
         private static string _purchaseEmail;
         private static string _purchaseOrderNumber;
-
-        ////[TestInitialize]
-        ////public void TestInitialize()
-        ////{
-        ////    Driver = new LoggingDriver(new WebDriver());
-        ////    Driver.Start(Browser.Chrome);
-        ////}
-
-        ////[TestCleanup]
-        ////public void TestCleanup()
-        ////{
-        ////    Driver.Quit();
-        ////}
 
         [TestMethod]
         public void CompletePurchaseSuccessfully_WhenNewClient()

@@ -121,10 +121,12 @@ namespace StabilizeTestsDemos.FourthVersion
             var quantityBox = _driver.FindElement(By.CssSelector("[class*='input-text qty text']"));
             quantityBox.TypeText("2");
 
-            _driver.WaitForAjax();
             ////Thread.Sleep(2000);
+            _driver.WaitForAjax();
+           
             var updateCart = _driver.FindElement(By.CssSelector("[value*='Update cart']"));
             updateCart.Click();
+
             ////Thread.Sleep(4000);
             _driver.WaitForAjax();
 

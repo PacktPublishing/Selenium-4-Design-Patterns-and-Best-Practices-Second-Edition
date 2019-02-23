@@ -77,7 +77,7 @@ namespace StabilizeTestsDemos.FifthVersion
         [AssemblyCleanup]
         public static void AssemblyCleanup()
         {
-            _driver.Quit();
+            _driver?.Quit();
         }
 
         public virtual void TestInit()
