@@ -11,15 +11,15 @@ namespace StabilizeTestsDemos.FourthVersion
         private static string _purchaseEmail;
         private static string _purchaseOrderNumber;
 
-        [ClassInitialize]
-        public static void ClassInitialize(TestContext testContext)
+        [TestInitialize]
+        public void TestInitialize()
         {
             _driver = new LoggingDriver(new WebDriver());
             _driver.Start(Browser.Chrome);
         }
 
-        [ClassCleanup]
-        public static void ClassCleanup()
+        [TestCleanup]
+        public void TestCleanup()
         {
             _driver.Quit();
         }
