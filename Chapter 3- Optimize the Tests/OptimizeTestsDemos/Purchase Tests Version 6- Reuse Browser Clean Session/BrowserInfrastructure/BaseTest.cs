@@ -74,11 +74,11 @@ namespace StabilizeTestsDemos.SixthVersion
 
         }
 
-        [AssemblyCleanup]
-        public static void AssemblyCleanup()
-        {
-            _driver?.Quit();
-        }
+        ////[AssemblyCleanup]
+        ////public static void AssemblyCleanup()
+        ////{
+        ////    _driver?.Quit();
+        ////}
 
         public virtual void TestInit()
         {
