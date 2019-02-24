@@ -15,6 +15,7 @@
     <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.23.0" />
     <PackageReference Include="Selenium.Support" Version="3.141.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Titanium.Web.Proxy" Version="3.0.895" />
   </ItemGroup>
 
 </Project>
