@@ -15,9 +15,6 @@ namespace TestsReadabilityDemos.Fourth
 
         public CartPage(Driver driver) : base(driver)
         {
-            SearchSection = new SearchSection(Driver);
-            MainMenuSection = new MainMenuSection(Driver);
-            CartInfoSection = new CartInfoSection(Driver);
             BreadcrumbSection = new BreadcrumbSection(Driver);
         }
 

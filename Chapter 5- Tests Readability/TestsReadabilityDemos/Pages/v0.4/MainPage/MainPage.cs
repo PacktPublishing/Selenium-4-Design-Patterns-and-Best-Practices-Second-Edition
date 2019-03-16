@@ -9,9 +9,6 @@ namespace TestsReadabilityDemos.Fourth
 
         public MainPage(Driver driver) : base(driver)
         {
-            SearchSection = new SearchSection(Driver);
-            MainMenuSection = new MainMenuSection(Driver);
-            CartInfoSection = new CartInfoSection(Driver);
         }
 
         protected override string Url => "http://demos.bellatrix.solutions/";
