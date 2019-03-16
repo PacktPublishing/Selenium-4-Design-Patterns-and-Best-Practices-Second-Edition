@@ -56,6 +56,11 @@ namespace TestsReadabilityDemos
             _webElement?.Click();
         }
 
+        public override Element FindElement(By locator)
+        {
+            return new WebElement(_webDriver, _webElement?.FindElement(locator), locator);
+        }
+
         public override string GetAttribute(string attributeName)
         {
             return _webElement?.GetAttribute(attributeName);

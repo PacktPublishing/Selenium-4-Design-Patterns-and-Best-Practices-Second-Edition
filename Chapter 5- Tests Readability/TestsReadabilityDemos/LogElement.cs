@@ -51,6 +51,12 @@ namespace TestsReadabilityDemos
             element?.Click();
         }
 
+        public override Element FindElement(By locator)
+        {
+            Console.WriteLine($"Find element with locator = {locator.ToString()}");
+            return element?.FindElement(locator);
+        }
+
         public override string GetAttribute(string attributeName)
         {
             Console.WriteLine($"Get Element's Attribute = {attributeName}");

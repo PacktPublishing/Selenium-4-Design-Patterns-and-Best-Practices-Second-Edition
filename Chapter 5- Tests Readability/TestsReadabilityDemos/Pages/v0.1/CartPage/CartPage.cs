@@ -19,6 +19,8 @@ namespace TestsReadabilityDemos.First
         private Element _cartIcon => _driver.FindElement(By.ClassName("cart-contents"));
         private Element _cartAmount => _driver.FindElement(By.ClassName("amount"));
 
+        private Element _breadcrumb => _driver.FindElement(By.ClassName("woocommerce-breadcrumb"));
+
         private Element _couponCodeTextField => _driver.FindElement(By.Id("coupon_code"));
         private Element _applyCouponButton => _driver.FindElement(By.CssSelector("[value*='Apply coupon']"));
         private Element _quantityBox => _driver.FindElement(By.CssSelector("[class*='input-text qty text']"));
@@ -65,6 +67,11 @@ namespace TestsReadabilityDemos.First
         public void OpenCart()
         {
             _cartIcon.Click();
+        }
+
+        public void OpenBreadcrumbItem(string itemToOpen)
+        {
+            _breadcrumb.FindElement(By.LinkText(itemToOpen)).Click();
         }
 
         public void ApplyCoupon(string coupon)
