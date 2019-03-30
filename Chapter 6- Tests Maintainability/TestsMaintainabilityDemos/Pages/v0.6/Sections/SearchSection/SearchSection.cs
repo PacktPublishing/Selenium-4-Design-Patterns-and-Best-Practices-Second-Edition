@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Sixth
+namespace TestsMaintainabilityDemos.Sixth
 {
     public class SearchSection
     {

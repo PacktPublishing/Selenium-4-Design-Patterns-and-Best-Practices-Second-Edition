@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class LogElement : ElementDecorator
     {

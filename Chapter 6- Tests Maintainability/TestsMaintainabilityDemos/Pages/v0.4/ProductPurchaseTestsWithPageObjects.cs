@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestsReadabilityDemos.Fourth
+namespace TestsMaintainabilityDemos.Fourth
 {
     [TestClass]
     public class SectionsTests

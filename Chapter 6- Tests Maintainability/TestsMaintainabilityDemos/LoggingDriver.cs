@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class LoggingDriver : DriverDecorator
     {

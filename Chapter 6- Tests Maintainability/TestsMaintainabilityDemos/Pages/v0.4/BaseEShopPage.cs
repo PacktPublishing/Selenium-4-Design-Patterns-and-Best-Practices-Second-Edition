@@ -1,4 +1,4 @@
-﻿namespace TestsReadabilityDemos.Fourth
+﻿namespace TestsMaintainabilityDemos.Fourth
 {
     public abstract class BaseEShopPage
     {

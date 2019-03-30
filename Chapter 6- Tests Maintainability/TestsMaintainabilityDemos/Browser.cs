@@ -1,4 +1,4 @@
-﻿namespace TestsReadabilityDemos
+﻿namespace TestsMaintainabilityDemos
 {
     public enum Browser
     {

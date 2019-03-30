@@ -1,12 +1,12 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Sixth
+namespace TestsMaintainabilityDemos.Facades.First
 {
-    public class MainElements
+    public class MainPageElements
     {
         private readonly Driver _driver;
 
-        public MainElements(Driver driver) => _driver = driver;
+        public MainPageElements(Driver driver) => _driver = driver;
 
         public Element AddToCartFalcon9 => _driver.FindElement(By.CssSelector("[data-product_id*='28']"));
         public Element ViewCartButton => _driver.FindElement(By.CssSelector("[class*='added_to_cart wc-forward']"));

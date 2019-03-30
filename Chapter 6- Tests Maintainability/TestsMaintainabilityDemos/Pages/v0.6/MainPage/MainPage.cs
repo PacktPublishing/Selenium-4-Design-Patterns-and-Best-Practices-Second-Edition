@@ -1,28 +1,28 @@
-﻿namespace TestsReadabilityDemos.Sixth
+﻿namespace TestsMaintainabilityDemos.Sixth
 {
     public class MainPage : NavigatableEShopPage
     {
         public MainPage(Driver driver) : base(driver)
         {
-            MainElements = new MainElements(driver);
-            MainAssertions = new MainAssertions(MainElements);
+            MainPageElements = new MainPageElements(driver);
+            MainPageAssertions = new MainPageAssertions(MainPageElements);
         }
 
-        public MainElements MainElements { get; set; }
-        public MainAssertions MainAssertions { get; set; }
+        public MainPageElements MainPageElements { get; set; }
+        public MainPageAssertions MainPageAssertions { get; set; }
 
         protected override string Url => "http://demos.bellatrix.solutions/";
 
         public void AddRocketToShoppingCart()
         {
             Open();
-            MainElements.AddToCartFalcon9.Click();
-            MainElements.ViewCartButton.Click();
+            MainPageElements.AddToCartFalcon9.Click();
+            MainPageElements.ViewCartButton.Click();
         }
 
         protected override void WaitForElementToDisplay()
         {
-            MainElements.AddToCartFalcon9.WaitToExists();
+            MainPageElements.AddToCartFalcon9.WaitToExists();
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace TestsReadabilityDemos.Sixth
+﻿namespace TestsMaintainabilityDemos.Sixth
 {
     public class CartPage : NavigatableEShopPage
     {
@@ -22,15 +20,14 @@ namespace TestsReadabilityDemos.Sixth
         {
             CartPageElements.CouponCodeTextField.TypeText(coupon);
             CartPageElements.ApplyCouponButton.Click();
-            Thread.Sleep(2000);
-
+            Driver.WaitForAjax();
         }
 
         public void IncreaseProductQuantity(int newQuantity)
         {
             CartPageElements.QuantityBox.TypeText(newQuantity.ToString());
             CartPageElements.UpdateCart.Click();
-            Thread.Sleep(4000);
+            Driver.WaitForAjax();
         }
 
         public void ProceedToCheckout()

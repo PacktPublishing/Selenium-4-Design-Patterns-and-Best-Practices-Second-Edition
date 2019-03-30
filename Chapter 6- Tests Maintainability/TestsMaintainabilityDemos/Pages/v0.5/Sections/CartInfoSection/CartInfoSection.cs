@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Fifth
+namespace TestsMaintainabilityDemos.Fifth
 {
     public class CartInfoSection
     {

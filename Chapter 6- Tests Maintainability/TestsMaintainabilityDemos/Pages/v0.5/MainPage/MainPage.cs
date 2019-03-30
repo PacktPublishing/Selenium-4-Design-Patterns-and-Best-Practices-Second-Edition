@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Fifth
+namespace TestsMaintainabilityDemos.Fifth
 {
     public class MainPage : NavigatableEShopPage
     {

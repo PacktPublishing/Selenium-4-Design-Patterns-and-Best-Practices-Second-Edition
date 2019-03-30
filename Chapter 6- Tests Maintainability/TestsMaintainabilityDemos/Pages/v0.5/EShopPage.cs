@@ -1,4 +1,4 @@
-﻿namespace TestsReadabilityDemos.Fifth
+﻿namespace TestsMaintainabilityDemos.Fifth
 {
     public abstract class EShopPage
     {

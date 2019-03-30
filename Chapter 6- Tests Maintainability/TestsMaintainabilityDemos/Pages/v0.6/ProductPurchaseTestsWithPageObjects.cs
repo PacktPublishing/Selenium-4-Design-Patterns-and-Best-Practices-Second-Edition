@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TestsReadabilityDemos.Sixth
+namespace TestsMaintainabilityDemos.Sixth
 {
     [TestClass]
     public class SectionsTests
@@ -29,7 +29,7 @@ namespace TestsReadabilityDemos.Sixth
         {
             _mainPage.Open();
 
-            _mainPage.MainAssertions.AssertProductBoxLink("Falcon 9", "http://demos.bellatrix.solutions/product/falcon-9/");
+            _mainPage.MainPageAssertions.AssertProductBoxLink("Falcon 9", "http://demos.bellatrix.solutions/product/falcon-9/");
         }
 
         [TestMethod]
@@ -37,7 +37,7 @@ namespace TestsReadabilityDemos.Sixth
         {
             _mainPage.Open();
 
-            _mainPage.MainAssertions.AssertProductBoxLink("Saturn V", "http://demos.bellatrix.solutions/product/saturn-v/");
+            _mainPage.MainPageAssertions.AssertProductBoxLink("Saturn V", "http://demos.bellatrix.solutions/product/saturn-v/");
         }
     }
 }

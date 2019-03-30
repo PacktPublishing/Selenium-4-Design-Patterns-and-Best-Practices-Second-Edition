@@ -1,7 +1,6 @@
-﻿using System.Threading;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class CartPage
     {
@@ -15,24 +14,20 @@ namespace TestsReadabilityDemos
         private Element _totalSpan => _driver.FindElement(By.XPath("//*[@class='order-total']//span"));
         private Element _proceedToCheckout => _driver.FindElement(By.CssSelector("[class*='checkout-button button alt wc-forward']"));
 
-        public CartPage(Driver driver)
-        {
-            _driver = driver;
-        }
+        public CartPage(Driver driver) => _driver = driver;
 
         public void ApplyCoupon(string coupon)
         {
             _couponCodeTextField.TypeText(coupon);
             _applyCouponButton.Click();
-            Thread.Sleep(2000);
-
+            _driver.WaitForAjax();
         }
 
         public void IncreaseProductQuantity(int newQuantity)
         {
             _quantityBox.TypeText(newQuantity.ToString());
             _updateCart.Click();
-            Thread.Sleep(4000);
+            _driver.WaitForAjax();
         }
 
         public void ProceedToCheckout()

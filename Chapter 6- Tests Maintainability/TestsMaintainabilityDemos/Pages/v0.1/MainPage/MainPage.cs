@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.First
+namespace TestsMaintainabilityDemos.First
 {
     public class MainPage
     {

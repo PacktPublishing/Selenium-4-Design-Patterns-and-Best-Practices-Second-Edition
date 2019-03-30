@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Fourth
+namespace TestsMaintainabilityDemos.Fourth
 {
     public class MainMenuSection
     {

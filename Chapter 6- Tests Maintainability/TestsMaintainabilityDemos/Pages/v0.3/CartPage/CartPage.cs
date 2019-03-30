@@ -1,7 +1,6 @@
-﻿using System.Threading;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos.Third
+namespace TestsMaintainabilityDemos.Third
 {
     public class CartPage
     {
@@ -34,15 +33,14 @@ namespace TestsReadabilityDemos.Third
         {
             _couponCodeTextField.TypeText(coupon);
             _applyCouponButton.Click();
-            Thread.Sleep(2000);
-
+            _driver.WaitForAjax();
         }
 
         public void IncreaseProductQuantity(int newQuantity)
         {
             _quantityBox.TypeText(newQuantity.ToString());
             _updateCart.Click();
-            Thread.Sleep(4000);
+            _driver.WaitForAjax();
         }
 
         public void ProceedToCheckout()

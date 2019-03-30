@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class DriverDecorator : Driver
     {
@@ -35,6 +35,21 @@ namespace TestsReadabilityDemos
         public override List<Element> FindElements(By locator)
         {
             return driver?.FindElements(locator);
+        }
+
+        public override void WaitForAjax()
+        {
+            driver?.WaitForAjax();
+        }
+
+        public override void WaitForJavaScriptAnimations()
+        {
+            driver?.WaitForJavaScriptAnimations();
+        }
+
+        public override void WaitUntilPageLoadsCompletely()
+        {
+            driver?.WaitUntilPageLoadsCompletely();
         }
     }
 }

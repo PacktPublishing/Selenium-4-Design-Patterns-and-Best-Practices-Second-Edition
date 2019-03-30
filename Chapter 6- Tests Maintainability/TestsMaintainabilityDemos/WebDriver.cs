@@ -10,7 +10,7 @@ using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.Safari;
 using OpenQA.Selenium.Support.UI;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class WebDriver : Driver
     {
@@ -80,6 +80,24 @@ namespace TestsReadabilityDemos
             }
 
             return elements;
+        }
+
+        public override void WaitForAjax()
+        {
+            var js = (IJavaScriptExecutor)_webDriver;
+            _webDriverWait.Until(wd => js.ExecuteScript("return jQuery.active").ToString() == "0");
+        }
+
+        public override void WaitForJavaScriptAnimations()
+        {
+            var js = (IJavaScriptExecutor)_webDriver;
+            _webDriverWait.Until(wd => js.ExecuteScript("jQuery(':animated').length").ToString() == "0");
+        }
+
+        public override void WaitUntilPageLoadsCompletely()
+        {
+            var js = (IJavaScriptExecutor)_webDriver;
+            _webDriverWait.Until(wd => js.ExecuteScript("return document.readyState").ToString() == "complete");
         }
     }
 }

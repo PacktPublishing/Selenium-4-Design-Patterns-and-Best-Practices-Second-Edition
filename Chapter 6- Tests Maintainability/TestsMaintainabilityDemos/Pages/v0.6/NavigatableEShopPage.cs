@@ -1,4 +1,4 @@
-﻿namespace TestsReadabilityDemos.Sixth
+﻿namespace TestsMaintainabilityDemos.Sixth
 {
     public abstract class NavigatableEShopPage
     {

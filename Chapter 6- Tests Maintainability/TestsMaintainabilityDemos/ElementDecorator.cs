@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public abstract class ElementDecorator : Element
     {

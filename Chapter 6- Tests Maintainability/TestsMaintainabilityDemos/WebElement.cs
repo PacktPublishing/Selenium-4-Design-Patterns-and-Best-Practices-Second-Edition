@@ -3,7 +3,7 @@ using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace TestsReadabilityDemos
+namespace TestsMaintainabilityDemos
 {
     public class WebElement : Element
     {
