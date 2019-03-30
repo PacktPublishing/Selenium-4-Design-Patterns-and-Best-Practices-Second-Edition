@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 
 namespace TestsReadabilityDemos.Fifth
 {
@@ -20,9 +21,21 @@ namespace TestsReadabilityDemos.Fifth
             _viewCartButton.Click();
         }
 
+        public void AssertProductBoxLink(string name, string expectedLink)
+        {
+            string actualLink = GetProductBoxByName(name).GetAttribute("href");
+
+            Assert.AreEqual(expectedLink, actualLink);
+        }
+
         protected override void WaitForElementToDisplay()
         {
             _addToCartFalcon9.WaitToExists();
+        }
+
+        private Element GetProductBoxByName(string name)
+        {
+            return Driver.FindElement(By.XPath($"//h2[text()='{name}']/parent::a[1]"));
         }
     }
 }
