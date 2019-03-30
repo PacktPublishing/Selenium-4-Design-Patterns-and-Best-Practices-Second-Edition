@@ -13,10 +13,10 @@
 
         protected override string Url => "http://demos.bellatrix.solutions/";
 
-        public void AddRocketToShoppingCart()
+        public void AddRocketToShoppingCart(string rocketName)
         {
             Open();
-            MainPageElements.AddToCartFalcon9.Click();
+            MainPageElements.GetProductBoxByName(rocketName).Click();
             Driver.WaitForAjax();
             MainPageElements.ViewCartButton.Click();
         }

@@ -8,6 +8,7 @@ namespace TestsMaintainabilityDemos.Facades.First
         private static Driver _driver;
         private static MainPage _mainPage;
         private static CartPage _cartPage;
+        private static CheckoutPage _checkoutPage;
 
         [ClassInitialize]
         public static void ClassInitialize(TestContext testContext)
@@ -16,6 +17,7 @@ namespace TestsMaintainabilityDemos.Facades.First
             _driver.Start(Browser.Chrome);
             _mainPage = new MainPage(_driver);
             _cartPage = new CartPage(_driver);
+            _checkoutPage = new CheckoutPage(_driver);
         }
 
         [ClassCleanup]
@@ -25,19 +27,57 @@ namespace TestsMaintainabilityDemos.Facades.First
         }
 
         [TestMethod]
-        public void Falcon9LinkAddsCorrectProduct()
+        public void PurchaseFalcon9WithoutFacade()
         {
             _mainPage.Open();
+            _mainPage.AddRocketToShoppingCart("Falcon 9");
+            _cartPage.ApplyCoupon("happybirthday");
+            _cartPage.CartPageAssertions.AssertCouponAppliedSuccessfully();
+            _cartPage.IncreaseProductQuantity(2);
+            _cartPage.CartPageAssertions.AssertTotalPrice("114.00€");
+            _cartPage.CartPageElements.ProceedToCheckout.Click();
 
-            _mainPage.MainPageAssertions.AssertProductBoxLink("Falcon 9", "http://demos.bellatrix.solutions/product/falcon-9/");
+            var purchaseInfo = new PurchaseInfo()
+                               {
+                                   FirstName = "Anton",
+                                   LastName = "Angelov",
+                                   Company = "Space Flowers",
+                                   Country = "Germany",
+                                   Address1 = "1 Willi Brandt Avenue Tiergarten",
+                                   Address2 = "Lützowplatz 17",
+                                   City = "Berlin",
+                                   Zip = "10115",
+                                   Phone = "+00498888999281",
+                               };
+            _checkoutPage.FillBillingInfo(purchaseInfo);
+            _checkoutPage.CheckoutPageAssertions.AssertOrderReceived();
         }
 
         [TestMethod]
-        public void SaturnVLinkAddsCorrectProduct()
+        public void PurchaseSaturnVWithoutFacade()
         {
             _mainPage.Open();
+            _mainPage.AddRocketToShoppingCart("Saturn V");
+            _cartPage.ApplyCoupon("happybirthday");
+            _cartPage.CartPageAssertions.AssertCouponAppliedSuccessfully();
+            _cartPage.IncreaseProductQuantity(3);
+            _cartPage.CartPageAssertions.AssertTotalPrice("355.00€");
+            _cartPage.CartPageElements.ProceedToCheckout.Click();
 
-            _mainPage.MainPageAssertions.AssertProductBoxLink("Saturn V", "http://demos.bellatrix.solutions/product/saturn-v/");
+            var purchaseInfo = new PurchaseInfo()
+                               {
+                                   FirstName = "John",
+                                   LastName = "Atanasov",
+                                   Company = "Space Flowers",
+                                   Country = "Germany",
+                                   Address1 = "1 Willi Brandt Avenue Tiergarten",
+                                   Address2 = "Lützowplatz 17",
+                                   City = "Berlin",
+                                   Zip = "10115",
+                                   Phone = "+00498888999281",
+                               };
+            _checkoutPage.FillBillingInfo(purchaseInfo);
+            _checkoutPage.CheckoutPageAssertions.AssertOrderReceived();
         }
     }
 }
