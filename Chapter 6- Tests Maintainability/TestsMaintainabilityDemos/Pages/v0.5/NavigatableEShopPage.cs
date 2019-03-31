@@ -21,9 +21,9 @@
         public void Open()
         {
             Driver.GoToUrl(Url);
-            WaitForElementToDisplay();
+            WaitForElementToBeDisplayed();
         }
 
-        protected abstract void WaitForElementToDisplay();
+        protected abstract void WaitForElementToBeDisplayed();
     }
 }

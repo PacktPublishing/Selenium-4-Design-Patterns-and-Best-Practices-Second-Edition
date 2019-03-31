@@ -52,7 +52,7 @@ namespace TestsMaintainabilityDemos.Fifth
             return _messageAlert.Text;
         }
 
-        protected override void WaitForElementToDisplay()
+        protected override void WaitForElementToBeDisplayed()
         {
             _couponCodeTextField.WaitToExists();
         }

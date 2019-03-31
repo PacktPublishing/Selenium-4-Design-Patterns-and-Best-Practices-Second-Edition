@@ -28,7 +28,7 @@ namespace TestsMaintainabilityDemos.Fifth
             Assert.AreEqual(expectedLink, actualLink);
         }
 
-        protected override void WaitForElementToDisplay()
+        protected override void WaitForElementToBeDisplayed()
         {
             _addToCartFalcon9.WaitToExists();
         }
