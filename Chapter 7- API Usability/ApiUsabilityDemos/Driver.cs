@@ -1,10 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 
 namespace ApiUsabilityDemos
 {
-    public abstract class Driver
+    public abstract class Driver : IDriver
     {
+        public abstract Uri Url { get; }
         public abstract void Start(Browser browser);
         public abstract void Quit();
         public abstract void GoToUrl(string url);

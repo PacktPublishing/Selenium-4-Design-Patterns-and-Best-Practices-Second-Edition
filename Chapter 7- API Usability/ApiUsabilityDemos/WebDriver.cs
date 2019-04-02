@@ -17,6 +17,8 @@ namespace ApiUsabilityDemos
         private IWebDriver _webDriver;
         private WebDriverWait _webDriverWait;
 
+        public override Uri Url => new Uri(_webDriver.Url);
+
         public override void Start(Browser browser)
         {
             switch (browser)

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using OpenQA.Selenium;
 
 namespace ApiUsabilityDemos
@@ -11,6 +12,8 @@ namespace ApiUsabilityDemos
         {
             this.driver = driver;
         }
+
+        public override Uri Url => driver?.Url;
 
         public override void Start(Browser browser)
         {
