@@ -11,3 +11,17 @@ C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chap
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.dll
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.csprojAssemblyReference.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.csproj.CoreCompileInputs.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.AssemblyInfoInputs.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.AssemblyInfo.cs
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.dll
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.deps.json
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.runtimeconfig.json
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.runtimeconfig.dev.json
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.dll
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
