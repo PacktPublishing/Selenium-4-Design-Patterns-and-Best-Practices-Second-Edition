@@ -11,7 +11,6 @@ C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chap
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\bin\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.dll
 C:\Source Code\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.pdb
-D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.csprojAssemblyReference.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.csproj.CoreCompileInputs.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.AssemblyInfoInputs.cache
 D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 7- API Usability\ApiUsabilityDemos\obj\Debug\netcoreapp2.1\ApiUsabilityDemos.AssemblyInfo.cs
