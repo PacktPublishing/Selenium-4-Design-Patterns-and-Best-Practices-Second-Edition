@@ -2,8 +2,6 @@
 {
     public class CartPage : NavigatableEShopPage
     {
-       
-
         public CartPage(Driver driver) : base(driver)
         {
             BreadcrumbSection = new BreadcrumbSection(Driver);
