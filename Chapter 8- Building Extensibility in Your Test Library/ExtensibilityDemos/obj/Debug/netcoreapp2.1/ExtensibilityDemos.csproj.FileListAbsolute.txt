@@ -1,0 +1,4 @@
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 8- Building Extensibility in Your Test Library\ExtensibilityDemos\obj\Debug\netcoreapp2.1\ExtensibilityDemos.csprojAssemblyReference.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 8- Building Extensibility in Your Test Library\ExtensibilityDemos\obj\Debug\netcoreapp2.1\ExtensibilityDemos.csproj.CoreCompileInputs.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 8- Building Extensibility in Your Test Library\ExtensibilityDemos\obj\Debug\netcoreapp2.1\ExtensibilityDemos.AssemblyInfoInputs.cache
+D:\SourceCode\3rd Party\Selenium-4-Design-Patterns-and-Best-Practices-Second-Edition\Chapter 8- Building Extensibility in Your Test Library\ExtensibilityDemos\obj\Debug\netcoreapp2.1\ExtensibilityDemos.AssemblyInfo.cs
