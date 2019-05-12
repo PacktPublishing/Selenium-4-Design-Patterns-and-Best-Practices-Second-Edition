@@ -8,20 +8,28 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Opera;
 using OpenQA.Selenium.Safari;
+using OpenQA.Selenium.Support.Events;
 using OpenQA.Selenium.Support.UI;
 
 namespace ExtensibilityDemos
 {
     public class WebDriver : Driver
     {
+        private readonly List<FiringWebDriverEventHandlers> _firingWebDriverEventHandlers;
         private IWebDriver _webDriver;
+        private EventFiringWebDriver _eventFiringWebDriver;
         private WebDriverWait _webDriverWait;
         private NativeElementFinderService _nativeElementFinderService;
 
         public WebDriver()
         {
-           
+            _firingWebDriverEventHandlers = new List<FiringWebDriverEventHandlers>
+                                           {
+                                               new DebugFiringWebDriverEventHandlers(),
+                                               new LoggingFiringWebDriverEventHandlers()
+                                           };
         }
+
         public override Uri Url => new Uri(_webDriver.Url);
 
         public override void Start(Browser browser)
@@ -55,6 +63,14 @@ namespace ExtensibilityDemos
             _webDriverWait.IgnoreExceptionTypes(typeof(WebDriverException));
 
             _nativeElementFinderService = new NativeElementFinderService(_webDriver);
+
+            // 1st version with private methods
+            ////_eventFiringWebDriver = new EventFiringWebDriver(_webDriver);
+            ////_eventFiringWebDriver.Navigated += OnNavigated;
+            ////_eventFiringWebDriver.ExceptionThrown += OnExceptionThrown;
+            ////_eventFiringWebDriver.ElementClicked += OnElementClicked;
+
+            InitializeEventFiringWebDriver();
         }
 
         public override void Quit()
@@ -249,6 +265,32 @@ namespace ExtensibilityDemos
         public override void Wait<TWaitStrategy, TElement>(TElement element, TWaitStrategy waitStrategy)
         {
             waitStrategy?.WaitUntil(_webDriver, element.By);
+        }
+
+        private void OnExceptionThrown(object sender, WebDriverExceptionEventArgs e)
+        {
+            Console.WriteLine(e.ThrownException.Message);
+        }
+
+        private void OnNavigated(object sender, WebDriverNavigationEventArgs e)
+        {
+            Console.WriteLine(e.Url);
+        }
+
+        private void OnElementClicked(object sender, WebElementEventArgs e)
+        {
+            Console.WriteLine(e.Element);
+        }
+
+        private void InitializeEventFiringWebDriver()
+        {
+            _eventFiringWebDriver = new EventFiringWebDriver(_webDriver);
+            foreach (var webDriverEventHandler in _firingWebDriverEventHandlers)
+            {
+                _eventFiringWebDriver.Navigated += webDriverEventHandler.OnNavigated;
+                _eventFiringWebDriver.ExceptionThrown += webDriverEventHandler.OnExceptionThrown;
+                _eventFiringWebDriver.ElementClicked += webDriverEventHandler.OnElementClicked;
+            }
         }
     }
 }
