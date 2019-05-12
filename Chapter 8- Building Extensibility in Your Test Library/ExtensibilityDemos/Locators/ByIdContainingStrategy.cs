@@ -9,6 +9,9 @@ namespace ExtensibilityDemos.Locators
         {
         }
 
-        public override By Convert() => By.CssSelector($"[id*='{Value}']");
+        public override By Convert()
+        {
+            return By.CssSelector($"[id*='{Value}']");
+        }
     }
 }
