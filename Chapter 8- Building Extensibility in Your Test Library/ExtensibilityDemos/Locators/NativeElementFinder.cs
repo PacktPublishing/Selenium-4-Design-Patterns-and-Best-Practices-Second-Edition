@@ -17,6 +17,20 @@ namespace ExtensibilityDemos.Locators
             return element;
         }
 
+        public IWebElement Find(By by)
+        {
+            var element = _searchContext.FindElement(by);
+
+            return element;
+        }
+
+        public IEnumerable<IWebElement> FindAll(By by)
+        {
+            IEnumerable<IWebElement> result = _searchContext.FindElements(by);
+
+            return result;
+        }
+
         public IEnumerable<IWebElement> FindAll<TByStrategy>(TByStrategy by)
             where TByStrategy : ByStrategy
         {

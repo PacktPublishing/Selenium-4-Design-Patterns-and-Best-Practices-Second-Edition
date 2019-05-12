@@ -13,10 +13,16 @@ namespace ExtensibilityDemos.Pages.Tenth
         {
             _driver = new LoggingDriver(new WebDriver());
             _driver.Start(browserType);
+            WaitService = _driver;
+            BrowserService = _driver;
+            CookiesService = _driver;
         }
 
         public void Dispose() => _driver.Quit();
 
+        public IElementWaitService WaitService { get; set; }
+        public IBrowserService BrowserService { get; set; }
+        public ICookiesService CookiesService { get; set; }
 
         public TPage Create<TPage>()
             where TPage : EShopPage

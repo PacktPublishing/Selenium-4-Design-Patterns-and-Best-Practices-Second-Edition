@@ -245,6 +245,10 @@ namespace ExtensibilityDemos
 
             return new LogElement(new WebElement(_webDriver, nativeElement, byStrategy.Convert())) as TElement;
         }
-       
+
+        public override void Wait<TWaitStrategy, TElement>(TElement element, TWaitStrategy waitStrategy)
+        {
+            waitStrategy?.WaitUntil(_webDriver, element.By);
+        }
     }
 }

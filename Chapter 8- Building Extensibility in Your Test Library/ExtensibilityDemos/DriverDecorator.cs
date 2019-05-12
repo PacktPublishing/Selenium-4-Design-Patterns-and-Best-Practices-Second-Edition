@@ -68,5 +68,6 @@ namespace ExtensibilityDemos
         public override List<Element> FindAllByLinkText(string linkText) => driver?.FindAllByLinkText(linkText);
         public override List<TElement> FindAll<TByStrategy, TElement>(string value) => driver?.FindAll<TByStrategy, TElement>(value);
         public override TElement Find<TByStrategy, TElement>(string value) => driver?.Find<TByStrategy, TElement>(value);
+        public override void Wait<TWaitStrategy, TElement>(TElement element, TWaitStrategy waitStrategy) => driver?.Wait(element, waitStrategy);
     }
 }

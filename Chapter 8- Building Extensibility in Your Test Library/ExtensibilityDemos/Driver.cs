@@ -32,7 +32,10 @@ namespace ExtensibilityDemos
         public abstract TElement Find<TByStrategy, TElement>(string value)
             where TByStrategy : ByStrategy
             where TElement : Element;
-       
+        public abstract void Wait<TWaitStrategy, TElement>(TElement element, TWaitStrategy waitStrategy)
+            where TWaitStrategy : WaitStrategy
+            where TElement : Element;
+
         ////public abstract Element FindElement(By locator);
         ////public abstract List<Element> FindElements(By locator);
     }

@@ -4,10 +4,12 @@ namespace ExtensibilityDemos.Tenth
 {
     public class CartPage : NavigatableEShopPage
     {
-        private CartPageElements _cartPageElements;
+        private readonly CartPageElements _cartPageElements;
+        private readonly IElementWaitService _elementWaitService;
 
         private CartPage(Driver driver) : base(driver)
         {
+            _elementWaitService = driver;
             BreadcrumbSection = new BreadcrumbSection(Driver);
             _cartPageElements = new CartPageElements(driver);
         }
@@ -19,7 +21,11 @@ namespace ExtensibilityDemos.Tenth
 
         public CartPage ApplyCoupon(string coupon)
         {
+            _elementWaitService.Wait(_cartPageElements.CouponCodeTextField, Wait.To.Exists());
+
             _cartPageElements.CouponCodeTextField.TypeText(coupon);
+
+            _elementWaitService.Wait(_cartPageElements.ApplyCouponButton, Wait.To.BeClickable());
             _cartPageElements.ApplyCouponButton.Click();
             Driver.WaitForAjax();
 
