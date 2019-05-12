@@ -7,7 +7,10 @@ namespace ExtensibilityDemos.Locators
     {
         private readonly ISearchContext _searchContext;
 
-        public NativeElementFinderService(ISearchContext searchContext) => _searchContext = searchContext;
+        public NativeElementFinderService(ISearchContext searchContext)
+        {
+            _searchContext = searchContext;
+        }
 
         public IWebElement Find<TByStrategy>(TByStrategy by)
             where TByStrategy : ByStrategy

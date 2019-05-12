@@ -9,6 +9,9 @@ namespace ExtensibilityDemos.Locators
         {
         }
 
-        public override By Convert() => By.Id(Value);
+        public override By Convert()
+        {
+            return By.Id(Value);
+        }
     }
 }
