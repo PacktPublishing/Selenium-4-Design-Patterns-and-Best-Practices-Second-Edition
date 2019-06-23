@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TestDataPreparationDemos.Configuration;
 
 namespace TestDataPreparationDemos.Tenth
 {
@@ -12,7 +13,8 @@ namespace TestDataPreparationDemos.Tenth
             _cartPageElements = new CartPageElements(driver);
         }
 
-        protected override string Url => "http://demos.bellatrix.solutions/cart/";
+        ////protected override string Url => "http://demos.bellatrix.solutions/cart/";
+        protected override string Url => UrlDeterminer.GetShopUrl("cart");
 
         public BreadcrumbSection BreadcrumbSection { get; set; }
 
