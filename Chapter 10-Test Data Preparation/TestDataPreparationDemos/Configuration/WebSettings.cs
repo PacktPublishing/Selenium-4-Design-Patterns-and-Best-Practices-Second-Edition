@@ -9,5 +9,6 @@
         public BrowserSettings Opera { get; set; }
         public BrowserSettings InternetExplorer { get; set; }
         public BrowserSettings Safari { get; set; }
+        public int ElementWaitTimeout { get; set; }
     }
 }

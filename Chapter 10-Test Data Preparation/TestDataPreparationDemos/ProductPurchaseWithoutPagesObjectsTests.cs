@@ -116,16 +116,32 @@ namespace TestDataPreparationDemos
 
         private void Login(string userName)
         {
-            Debug.WriteLine($"Login Start: {_stopWatch.Elapsed.TotalSeconds}");
-
             var userNameTextField = _driver.FindElement(By.Id("username"));
             userNameTextField.TypeText(userName);
             var passwordField = _driver.FindElement(By.Id("password"));
             passwordField.TypeText(GetUserPasswordFromDb(userName));
             var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
             loginButton.Click();
+        }
 
-            Debug.WriteLine($"Login End: {_stopWatch.Elapsed.TotalSeconds}");
+        private void LoginWithEnvironmentalVariables(string userName)
+        {
+            var userNameTextField = _driver.FindElement(By.Id("username"));
+            userNameTextField.TypeText(userName);
+            var passwordField = _driver.FindElement(By.Id("password"));
+            passwordField.TypeText(Environment.GetEnvironmentVariable($"{userName}_pass"));
+            var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
+            loginButton.Click();
+        }
+
+        private void LoginDefaultValues(string userName = "aangelov")
+        {
+            var userNameTextField = _driver.FindElement(By.Id("username"));
+            userNameTextField.TypeText(userName);
+            var passwordField = _driver.FindElement(By.Id("password"));
+            passwordField.TypeText(Environment.GetEnvironmentVariable($"{userName}_pass"));
+            var loginButton = _driver.FindElement(By.XPath("//button[@name='login']"));
+            loginButton.Click();
         }
 
         private void IncreaseProductQuantity()
