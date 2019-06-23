@@ -50,6 +50,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="testCases.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="testFrameworkSettings.$(Configuration).json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
