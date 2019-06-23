@@ -1,3 +1,4 @@
+using AutoFixture;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TestDataPreparationDemos.Facades.Second
@@ -69,6 +70,16 @@ namespace TestDataPreparationDemos.Facades.Second
                                    Zip = "10115",
                                    Phone = "+00498888999281",
                                };
+
+            _purchaseFirstVersionFacade.PurchaseItem("Saturn V", "happybirthday", 3, "355.00€", purchaseInfo);
+        }
+
+        [TestMethod]
+        public void PurchaseSaturnVWithRandomNoteFacade()
+        {
+            var purchaseInfo = new PurchaseInfo();
+            var fixture = new Fixture();
+            purchaseInfo.Note = fixture.Create<string>();
 
             _purchaseFirstVersionFacade.PurchaseItem("Saturn V", "happybirthday", 3, "355.00€", purchaseInfo);
         }

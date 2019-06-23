@@ -16,5 +16,6 @@ namespace TestDataPreparationDemos.Facades.Second
         public string Email { get; set; } = ResourcesService.GetString("email");
         public bool ShouldCreateAccount { get; set; }
         public bool ShouldCheckPayment { get; set; }
+        public string Note { get; set; }
     }
 }
