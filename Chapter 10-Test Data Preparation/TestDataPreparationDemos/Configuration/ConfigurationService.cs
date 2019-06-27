@@ -42,6 +42,18 @@ namespace TestDataPreparationDemos
         public WebSettings GetWebSettings()
          => ConfigurationService.Instance.Root.GetSection("webSettings").Get<WebSettings>();
 
+        public BillingInfoDefaultValues GetBillingInfoDefaultValues()
+        {
+            var result = ConfigurationService.Instance.Root.GetSection("billingInfoDefaultValues").Get<BillingInfoDefaultValues>();
+
+            if (result == null)
+            {
+                throw new ConfigurationNotFoundException(typeof(BillingInfoDefaultValues).ToString());
+            }
+
+            return result;
+        }
+
         private IConfigurationRoot InitializeConfiguration()
         {
             var filesInExecutionDir = Directory.GetFiles(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));

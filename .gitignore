@@ -29,3 +29,9 @@ Chapter 2- Stabilize the Tests/.vs/StabilizeTestsDemos/v15/Server/sqlite3/db.loc
 /Chapter 10-Test Data Preparation/TestDataPreparationDemos/bin/Debug
 /Chapter 10-Test Data Preparation/TestDataPreparationDemos/obj
 /Chapter 10-Test Data Preparation/.vs
+/Chapter 10-Test Data Preparation/DataAccess.Core/obj
+/Chapter 10-Test Data Preparation/DataAccess.Core/bin/Debug/netstandard2.0
+/Chapter 10-Test Data Preparation/TestDataGen.Model/obj
+/Chapter 10-Test Data Preparation/TestDataGen.Model/bin/Debug/netstandard2.0
+/Chapter 10-Test Data Preparation/TestDataGen.Tool/obj
+/Chapter 10-Test Data Preparation/TestDataGen.Tool/bin/Debug/netcoreapp2.2

@@ -1,16 +1,20 @@
-﻿namespace TestDataPreparationDemos.Facades.Second
+﻿using DataAccess.Core;
+
+namespace TestDataPreparationDemos.Facades.Second
 {
     public class PurchaseFirstVersionFacade : PurchaseFacade
     {
         private readonly MainPage _mainPage;
         private readonly CartPage _cartPage;
         private readonly CheckoutPage _checkoutPage;
+        private readonly UsersFactory _usersFactory;
 
-        public PurchaseFirstVersionFacade(MainPage mainPage, CartPage cartPage, CheckoutPage checkoutPage)
+        public PurchaseFirstVersionFacade(MainPage mainPage, CartPage cartPage, CheckoutPage checkoutPage, UsersFactory usersFactory)
         {
             _mainPage = mainPage;
             _cartPage = cartPage;
             _checkoutPage = checkoutPage;
+            _usersFactory = usersFactory;
         }
 
         protected override void AddItemToShoppingCart(string itemName)
@@ -41,6 +45,11 @@
 
         protected override void FillBillingInfo(PurchaseInfo purchaseInfo)
         {
+            var user = _usersFactory.GetUser();
+            purchaseInfo.Email = user.Email;
+            purchaseInfo.FirstName = user.FirstName;
+            purchaseInfo.LastName = user.LastName;
+
             _checkoutPage.FillBillingInfo(purchaseInfo);
         }
 

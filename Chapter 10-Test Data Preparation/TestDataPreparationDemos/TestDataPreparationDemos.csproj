@@ -26,28 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="defaultValues.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>defaultValues.resx</DependentUpon>
-    </Compile>
-    <Compile Update="defaultValues.Debug.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>defaultValues.Debug.resx</DependentUpon>
-    </Compile>
-    <Compile Update="defaultValues.Release.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>defaultValues.Release.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="defaultValues.$(Configuration).resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>defaultValues.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <ProjectReference Include="..\DataAccess.Core\DataAccess.Core.csproj" />
+    <ProjectReference Include="..\TestDataGen.Model\TestDataGen.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

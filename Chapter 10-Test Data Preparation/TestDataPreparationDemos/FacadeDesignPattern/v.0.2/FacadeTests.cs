@@ -1,5 +1,8 @@
 using AutoFixture;
+using DataAccess.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
+using TestDataGen.Model;
 
 namespace TestDataPreparationDemos.Facades.Second
 {
@@ -11,6 +14,8 @@ namespace TestDataPreparationDemos.Facades.Second
         private static CartPage _cartPage;
         private static CheckoutPage _checkoutPage;
         private static PurchaseFirstVersionFacade _purchaseFirstVersionFacade;
+        private static UsersFactory _usersFactory;
+        private static UsersRepository _usersRepository;
 
         private TestContext testContextInstance;
         public TestContext TestContext
@@ -27,7 +32,9 @@ namespace TestDataPreparationDemos.Facades.Second
             _mainPage = new MainPage(_driver);
             _cartPage = new CartPage(_driver);
             _checkoutPage = new CheckoutPage(_driver);
-            _purchaseFirstVersionFacade = new PurchaseFirstVersionFacade(_mainPage, _cartPage, _checkoutPage);
+            _usersRepository = new UsersRepository();
+            _usersFactory = new UsersFactory(_usersRepository);
+            _purchaseFirstVersionFacade = new PurchaseFirstVersionFacade(_mainPage, _cartPage, _checkoutPage, _usersFactory);
         }
 
         [ClassCleanup]
@@ -82,6 +89,19 @@ namespace TestDataPreparationDemos.Facades.Second
             purchaseInfo.Note = fixture.Create<string>();
 
             _purchaseFirstVersionFacade.PurchaseItem("Saturn V", "happybirthday", 3, "355.00€", purchaseInfo);
+        }
+
+        [TestMethod]
+        public void NewUserCreatedSuccessfully_WhenUserNewRegistrationForm()
+        {
+            // Create a new user through the UI form.
+
+            // Verify new user in DB.
+            var actuallyCreatedUser = _usersRepository.GetAllQuery<User>().First(x => x.Email.Equals("newUniqueEmail@bella.com"));
+
+            Assert.AreEqual("Anton", actuallyCreatedUser.FirstName);
+            Assert.AreEqual("Angelov", actuallyCreatedUser.LastName);
+            Assert.AreEqual("superSecret", actuallyCreatedUser.Password);
         }
 
         // .NET Core does not support the DataSource attribute. If you try to access test data in this way in a .NET Core or UWP unit test project, 
