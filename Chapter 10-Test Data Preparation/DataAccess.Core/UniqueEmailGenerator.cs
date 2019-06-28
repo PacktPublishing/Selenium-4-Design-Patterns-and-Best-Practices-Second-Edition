@@ -4,33 +4,36 @@ namespace DataAccess.Core
 {
     public static class UniqueEmailGenerator
     {
-        public static string BuildUniqueEmail(string prefix, string sufix)
+        public static string EmailPrefix { get; set; } = "atp";
+        public static string EmailSuffix { get; set; } = "bellatrix.solutions";
+
+        public static string GenerateUniqueEmail(string prefix, string sufix)
         {
-            var result = string.Concat(prefix, "_", TimestampBuilder.GenerateUniqueText(), "@", sufix, ".com");
+            var result = string.Concat(prefix, "_", TimestampBuilder.GenerateUniqueText(), "@", sufix);
             return result;
         }
 
-        public static string BuildUniqueEmailTimestamp()
+        public static string GenerateUniqueEmailTimestamp()
         {
-            var result = $"atp-{TimestampBuilder.GenerateUniqueText()}@bellatrix.com";
+            var result = $"{EmailPrefix}-{TimestampBuilder.GenerateUniqueText()}@{EmailSuffix}";
             return result;
         }
 
-        public static string BuildUniqueEmailGuid()
+        public static string GenerateUniqueEmailGuid()
         {
-            var result = $"atp-{Guid.NewGuid()}@bellatrix.com";
+            var result = $"{EmailPrefix}-{Guid.NewGuid()}@{EmailSuffix}";
             return result;
         }
 
-        public static string BuildUniqueEmail(string prefix)
+        public static string GenerateUniqueEmail(string prefix)
         {
-            var result = $"{prefix}{TimestampBuilder.GenerateUniqueText()}@bellatrix.com";
+            var result = $"{prefix}{TimestampBuilder.GenerateUniqueText()}@{EmailSuffix}";
             return result;
         }
 
-        public static string BuildUniqueEmail(char specialSymbol)
+        public static string GenrateUniqueEmail(char specialSymbol)
         {
-            var result = $"atp-{TimestampBuilder.GenerateUniqueText()}{specialSymbol}@bellatrix.com";
+            var result = $"{EmailPrefix}-{TimestampBuilder.GenerateUniqueText()}{specialSymbol}@{EmailSuffix}";
             return result;
         }
     }

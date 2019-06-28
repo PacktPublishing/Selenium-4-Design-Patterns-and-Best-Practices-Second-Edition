@@ -6,7 +6,7 @@ namespace DataAccess.Core
 {
     public static class TimestampBuilder
     {
-        public static string BuildUniqueText(string text)
+        public static string GenerateUniqueText(string text)
         {
             var newTimestamp = GenerateUniqueText();
             var result = string.Concat(text, newTimestamp);

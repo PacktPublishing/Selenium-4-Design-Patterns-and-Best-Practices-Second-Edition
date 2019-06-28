@@ -26,7 +26,7 @@ namespace DataAccess.Core
                     var fixture = new Fixture();
                     var newUser = new User()
                     {
-                        Email = UniqueEmailGenerator.BuildUniqueEmailTimestamp(),
+                        Email = UniqueEmailGenerator.GenerateUniqueEmailTimestamp(),
                         FirstName = fixture.Create<string>(),
                         LastName = fixture.Create<string>(),
                         Password = fixture.Create<Guid>().ToString(),

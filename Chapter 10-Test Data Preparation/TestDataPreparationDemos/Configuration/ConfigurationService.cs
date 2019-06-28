@@ -40,7 +40,9 @@ namespace TestDataPreparationDemos
         }
 
         public WebSettings GetWebSettings()
-         => ConfigurationService.Instance.Root.GetSection("webSettings").Get<WebSettings>();
+        {
+            return ConfigurationService.Instance.Root.GetSection("webSettings").Get<WebSettings>();
+        }
 
         public BillingInfoDefaultValues GetBillingInfoDefaultValues()
         {

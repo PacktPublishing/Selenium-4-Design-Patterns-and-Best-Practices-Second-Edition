@@ -92,11 +92,11 @@ namespace TestDataPreparationDemos.Facades.Second
         }
 
         [TestMethod]
-        public void NewUserCreatedSuccessfully_WhenUserNewRegistrationForm()
+        public void NewUserCreatedSuccessfully_WhenUsedNewRegistrationForm()
         {
             // Create a new user through the UI form.
 
-            // Verify new user in DB.
+            // Verify the new user in DB.
             var actuallyCreatedUser = _usersRepository.GetAllQuery<User>().First(x => x.Email.Equals("newUniqueEmail@bella.com"));
 
             Assert.AreEqual("Anton", actuallyCreatedUser.FirstName);
